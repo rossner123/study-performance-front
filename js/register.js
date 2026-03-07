@@ -6,7 +6,7 @@ document.querySelector('#registerForm').addEventListener('submit', async (event)
     const password = document.querySelector('#senha-registro').value
 
     try {
-      const response = await fetch("http://localhost:3000/register", {
+      const response = await fetch(`${APP_CONFIG.API_URL}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
